@@ -1,4 +1,4 @@
-import sys, os, json, subprocess, tempfile
+import sys, os, re, json, subprocess, tempfile
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 TPL = r"""<!doctype html><html lang="ko"><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -34,9 +34,12 @@ let html = marked.parse(s);
 html = html.replace(/@@M(\d+)@@/g, (m, i) => katex.renderToString(maths[+i][0], {displayMode: maths[+i][1], throwOnError: false}));
 document.getElementById("c").innerHTML = html;
 </script></body></html>"""
-for md in sys.argv[1:]:
+plain = "--plain" in sys.argv  # 해설지용: 메모란·꼬리말 없이
+for md in [a for a in sys.argv[1:] if a != "--plain"]:
     src = open(md, encoding="utf-8").read()
     html = TPL.replace("__SRC__", json.dumps(src))
+    if plain:
+        html = re.sub(r'<div class="memo">.*?</div>\n<div class="foot">.*?</div>', "", html, flags=re.S)
     tmp = os.path.join(tempfile.gettempdir(), "ai_life_render.html")
     open(tmp, "w", encoding="utf-8").write(html)
     out = md[:-3] + ".pdf"
