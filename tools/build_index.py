@@ -66,6 +66,8 @@ def main():
     weeks = {}
     for folder in CATEGORIES:
         for path in sorted(glob.glob(os.path.join(ROOT, folder, "*.md"))):
+            if path.endswith("_쪽별해설.md"):
+                continue
             week = os.path.basename(path).split("_")[0]
             weeks.setdefault(week, []).append(card(folder, path))
     sections = []
