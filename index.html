@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Life 논문 서재</title>
+<style>
+:root { --bg:#f7f8fb; --card:#fff; --ink:#1a202c; --sub:#5a6475; --line:#e2e6ee; --accent:#2b6cb0; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#12151b; --card:#1b2029; --ink:#e7ebf2; --sub:#9aa5b8; --line:#2c3341; --accent:#7db3f0; } }
+:root[data-theme="dark"] { --bg:#12151b; --card:#1b2029; --ink:#e7ebf2; --sub:#9aa5b8; --line:#2c3341; --accent:#7db3f0; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif; line-height:1.6; }
+header { padding:40px 16px 20px; max-width:1100px; margin:auto; }
+header h1 { margin:0 0 6px; font-size:28px; }
+header p { margin:0; color:var(--sub); }
+nav { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; font-size:14px; }
+nav a { color:var(--accent); }
+.filters { max-width:1100px; margin:0 auto; padding:0 16px; display:flex; gap:8px; flex-wrap:wrap; }
+.filters button { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:20px; padding:6px 14px; cursor:pointer; font:inherit; font-size:14px; }
+.filters button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+main { max-width:1100px; margin:auto; padding:0 16px 60px; }
+.week h2 { font-size:20px; margin:32px 0 12px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.guide { font-size:14px; font-weight:normal; color:var(--accent); }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; display:flex; flex-direction:column; }
+.card h3 { margin:6px 0 2px; font-size:17px; }
+.tag { font-size:12px; color:var(--accent); font-weight:600; }
+.orig { margin:0; font-style:italic; color:var(--sub); font-size:13px; }
+.meta { font-size:12.5px; color:var(--sub); margin:8px 0; }
+.sum { font-size:14px; margin:4px 0 8px; flex:1; }
+.unit { font-size:12.5px; color:var(--sub); margin:0 0 10px; }
+.btns { display:flex; flex-wrap:wrap; gap:8px; font-size:13px; }
+.btn { border:1px solid var(--line); border-radius:8px; padding:5px 10px; }
+.btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); text-decoration:none; }
+a { color:var(--accent); }
+</style></head><body>
+<header>
+  <h1>📚 AI Life 논문 서재</h1>
+  <p>원리와 수학으로 읽는 인공지능 — 매주 10편, 한국어 리뷰지와 원문 PDF</p>
+  <nav><a href="00_참고도서/참고도서_추천.pdf" target="_blank">참고 도서 추천</a>
+  <a href="https://shinukhang.github.io/ai_life/">← AI Life 커리큘럼으로</a></nav>
+</header>
+<div class="filters"><button class="on" data-f="all">전체</button><button data-f="인공지능 수학">인공지능 수학</button><button data-f="기계학습">기계학습</button><button data-f="딥러닝">딥러닝</button><button data-f="컴퓨터 교육">컴퓨터 교육</button><button data-f="네트워크">네트워크</button></div>
+<main>
+<section class="week"><h2>2026년 43주차
+  <a class="guide" href="00_주간_읽기목록/2026-W43_이번주_읽기목록.pdf" target="_blank">📅 이번 주 읽기 가이드 PDF</a></h2>
+  <div class="grid"><article class="card" data-cat="인공지능 수학">
+  <div class="tag">인공지능 수학 · ★★★★☆ (실해석·함수해석 기초 필요)</div>
+  <h3>시그모이드 함수의 중첩에 의한 근사 (보편 근사 정리)</h3>
+  <p class="orig">Approximation by Superpositions of a Sigmoidal Function</p>
+  <p class="meta">George Cybenko (University of Illinois, 미국)<br>Mathematics of Control, Signals, and Systems, Vol. 2, pp. 303–314, 1989</p>
+  <p class="sum">은닉층이 하나뿐인 신경망도, 뉴런 수만 충분하면 [0,1]ⁿ 위의 어떤 연속함수든 원하는 만큼 정확하게 근사할 수 있다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀(함수 근사의 원리), 03 CNN</p>
+  <div class="btns"><a class="btn primary" href="01_인공지능_수학/2026-W43_Cybenko1989_보편근사정리.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://papers.baulab.info/papers/Cybenko-1989.pdf" target="_blank" rel="noopener">PDF (연구실 공개본)</a> · 공식본은 Springer 유료</span></div>
+</article><article class="card" data-cat="인공지능 수학">
+  <div class="tag">인공지능 수학 · ★★★★★</div>
+  <h3>신경 탄젠트 커널: 신경망의 수렴과 일반화</h3>
+  <p class="orig">Neural Tangent Kernel: Convergence and Generalization in Neural Networks</p>
+  <p class="meta">Arthur Jacot, Franck Gabriel, Clément Hongler (EPFL, 스위스)<br>NeurIPS 2018</p>
+  <p class="sum">폭(뉴런 수)이 무한대로 커지는 신경망을 경사하강법으로 학습하면, 그 학습 과정은 고정된 커널(NTK)을 쓰는 &#x27;커널 회귀&#x27;와 정확히 같아진다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀 심화(경사하강의 수학)</p>
+  <div class="btns"><a class="btn primary" href="01_인공지능_수학/2026-W43_Jacot2018_신경탄젠트커널.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1806.07572" target="_blank" rel="noopener">arXiv PDF (무료)</a></span></div>
+</article><article class="card" data-cat="인공지능 수학">
+  <div class="tag">인공지능 수학 · ★★★☆☆</div>
+  <h3>Adam: 확률적 최적화 방법</h3>
+  <p class="orig">Adam: A Method for Stochastic Optimization</p>
+  <p class="meta">Diederik P. Kingma (University of Amsterdam), Jimmy Lei Ba (University of Toronto)<br>ICLR 2015</p>
+  <p class="sum">기울기의 1차 모멘트(평균)와 2차 모멘트(제곱 평균)를 지수이동평균으로 추정해, 파라미터마다 학습률을 자동으로 조절하는 최적화 알고리즘.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀(경사하강·학습률 슬라이더)</p>
+  <div class="btns"><a class="btn primary" href="01_인공지능_수학/2026-W43_Kingma2015_Adam최적화.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1412.6980" target="_blank" rel="noopener">arXiv PDF (무료)</a></span></div>
+</article><article class="card" data-cat="기계학습">
+  <div class="tag">기계학습 · ★★★☆☆</div>
+  <h3>현대 기계학습과 편향-분산 트레이드오프의 화해 (이중 하강)</h3>
+  <p class="orig">Reconciling Modern Machine-Learning Practice and the Classical Bias–Variance Trade-off</p>
+  <p class="meta">Mikhail Belkin, Daniel Hsu, Siyuan Ma, Soumik Mandal (Ohio State University, Columbia University)<br>PNAS Vol. 116, No. 32, 2019</p>
+  <p class="sum">모델 크기를 키우면 테스트 오차는 U자 모양으로 올라갔다가, 훈련 데이터를 완벽히 맞추는 지점(보간 임계점)을 지나면 다시 내려간다 — &quot;이중 하강(double descent)&quot;.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀(모델 복잡도·과적합)</p>
+  <div class="btns"><a class="btn primary" href="02_기계학습/2026-W43_Belkin2019_이중하강.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1812.11118" target="_blank" rel="noopener">arXiv PDF (무료)</a> · PNAS 오픈액세스</span></div>
+</article><article class="card" data-cat="기계학습">
+  <div class="tag">기계학습 · ★★★★☆</div>
+  <h3>자동 인코딩 변분 베이즈 (VAE)</h3>
+  <p class="orig">Auto-Encoding Variational Bayes</p>
+  <p class="meta">Diederik P. Kingma, Max Welling (University of Amsterdam, 네덜란드)<br>ICLR 2014</p>
+  <p class="sum">계산 불가능한 사후분포를 신경망(인코더)으로 근사하고, &#x27;재매개변수화 트릭&#x27;으로 확률적 샘플링을 미분 가능하게 만들어 생성 모델을 역전파로 학습한다.</p>
+  <p class="unit">🔗 ai_life 연결: 02 컴퓨터비전 심화(생성 모델)</p>
+  <div class="btns"><a class="btn primary" href="02_기계학습/2026-W43_Kingma2014_변분오토인코더.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1312.6114" target="_blank" rel="noopener">arXiv PDF (무료)</a></span></div>
+</article><article class="card" data-cat="기계학습">
+  <div class="tag">기계학습 · ★★☆☆☆ (수식 적음, 개념 중요)</div>
+  <h3>딥러닝을 이해하려면 일반화를 다시 생각해야 한다</h3>
+  <p class="orig">Understanding Deep Learning Requires Rethinking Generalization</p>
+  <p class="meta">Chiyuan Zhang (MIT), Samy Bengio, Moritz Hardt (Google Brain), Benjamin Recht (UC Berkeley), Oriol Vinyals (DeepMind)<br>ICLR 2017 (최우수 논문상)</p>
+  <p class="sum">신경망은 무작위로 섞은 정답(랜덤 레이블)도 완벽히 외울 수 있다. 따라서 VC 차원·라데마허 복잡도 같은 고전적 이론으로는 신경망이 왜 일반화되는지 설명할 수 없다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀·02 컴퓨터비전(과적합과 일반화)</p>
+  <div class="btns"><a class="btn primary" href="02_기계학습/2026-W43_Zhang2017_일반화재고찰.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1611.03530" target="_blank" rel="noopener">arXiv PDF (무료)</a></span></div>
+</article><article class="card" data-cat="딥러닝">
+  <div class="tag">딥러닝 · ★★☆☆☆</div>
+  <h3>이미지 인식을 위한 깊은 잔차 학습 (ResNet)</h3>
+  <p class="orig">Deep Residual Learning for Image Recognition</p>
+  <p class="meta">Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun (Microsoft Research Asia)<br>CVPR 2016 (최우수 논문상)</p>
+  <p class="sum">층이 함수 전체 $H(x)$ 대신 &#x27;차이&#x27; $F(x)=H(x)-x$만 배우도록 지름길(skip connection)을 추가하면, 152층 이상의 매우 깊은 신경망도 안정적으로 학습된다.</p>
+  <p class="unit">🔗 ai_life 연결: 03 CNN 합성곱신경망</p>
+  <div class="btns"><a class="btn primary" href="03_딥러닝/2026-W43_He2016_ResNet잔차학습.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1512.03385" target="_blank" rel="noopener">arXiv PDF (무료)</a></span></div>
+</article><article class="card" data-cat="딥러닝">
+  <div class="tag">딥러닝 · ★★★☆☆</div>
+  <h3>어텐션만 있으면 된다 (트랜스포머)</h3>
+  <p class="orig">Attention Is All You Need</p>
+  <p class="meta">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin (Google Brain / Google Research / University of Toronto)<br>NeurIPS 2017</p>
+  <p class="sum">순환(RNN)이나 합성곱 없이 &#x27;어텐션&#x27; 연산만으로 문장을 처리하는 트랜스포머 구조를 제안 — GPT, BERT, Claude 등 현대 거대 언어모델의 출발점.</p>
+  <p class="unit">🔗 ai_life 연결: 04 자연어처리·AI 에이전트</p>
+  <div class="btns"><a class="btn primary" href="03_딥러닝/2026-W43_Vaswani2017_트랜스포머.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1706.03762" target="_blank" rel="noopener">arXiv PDF (무료)</a></span></div>
+</article><article class="card" data-cat="컴퓨터 교육">
+  <div class="tag">컴퓨터 교육 · ★☆☆☆☆ (3쪽짜리 칼럼)</div>
+  <h3>컴퓨팅 사고력</h3>
+  <p class="orig">Computational Thinking</p>
+  <p class="meta">Jeannette M. Wing (Carnegie Mellon University, 미국)<br>Communications of the ACM, Vol. 49, No. 3, pp. 33–35, 2006</p>
+  <p class="sum">컴퓨팅 사고력(Computational Thinking)은 프로그래머만의 기술이 아니라 읽기·쓰기·산수처럼 모든 사람이 갖춰야 할 기본 사고 능력이다.</p>
+  <p class="unit">🔗 ai_life 연결: 전체 커리큘럼 설계 원리(교사용)</p>
+  <div class="btns"><a class="btn primary" href="04_컴퓨터_교육/2026-W43_Wing2006_컴퓨팅사고력.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://www.cs.columbia.edu/~wing/publications/Wing06.pdf" target="_blank" rel="noopener">PDF (저자 공개본)</a></span></div>
+</article><article class="card" data-cat="네트워크">
+  <div class="tag">네트워크 · ★★☆☆☆</div>
+  <h3>패킷 네트워크 상호 통신을 위한 프로토콜 (TCP/IP의 기원)</h3>
+  <p class="orig">A Protocol for Packet Network Intercommunication</p>
+  <p class="meta">Vinton G. Cerf (Stanford University), Robert E. Kahn (DARPA, 미국)<br>IEEE Transactions on Communications, Vol. 22, No. 5, pp. 637–648, 1974</p>
+  <p class="sum">서로 다른 패킷 네트워크들을 &#x27;게이트웨이&#x27;로 연결하고, 종단 호스트끼리 신뢰성 있게 통신하는 공통 프로토콜(TCP)을 제안 — 오늘날 인터넷 구조의 설계도.</p>
+  <p class="unit">🔗 ai_life 연결: 04 AI 에이전트(API·통신 구조)</p>
+  <div class="btns"><a class="btn primary" href="05_네트워크/2026-W43_CerfKahn1974_패킷네트워크상호통신.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://www.cs.bu.edu/fac/matta/Teaching/cs556/archive/cerfkahn.pdf" target="_blank" rel="noopener">PDF (보스턴대 강의 자료)</a> · 공식본은 IEEE Xplore</span></div>
+</article></div></section>
+</main>
+<script>
+document.querySelectorAll('.filters button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.filters button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.card').forEach(c => c.style.display = (b.dataset.f === 'all' || c.dataset.cat === b.dataset.f) ? '' : 'none');
+});
+</script>
+</body></html>
