@@ -40,6 +40,99 @@ a { color:var(--accent); }
 </header>
 <div class="filters"><button class="on" data-f="all">전체</button><button data-f="인공지능 수학">인공지능 수학</button><button data-f="기계학습">기계학습</button><button data-f="딥러닝">딥러닝</button><button data-f="컴퓨터 교육">컴퓨터 교육</button><button data-f="네트워크">네트워크</button></div>
 <main>
+<section class="week"><h2>2026년 44주차
+  <a class="guide" href="00_주간_읽기목록/2026-W44_이번주_읽기목록.pdf" target="_blank">📅 이번 주 읽기 가이드 PDF</a></h2>
+  <div class="grid"><article class="card" data-cat="인공지능 수학">
+  <div class="tag">인공지능 수학 · ★★★★☆</div>
+  <h3>다층 순방향 신경망은 보편 근사기이다</h3>
+  <p class="orig">Multilayer Feedforward Networks are Universal Approximators</p>
+  <p class="meta">Kurt Hornik (빈 공과대학, 오스트리아), Maxwell Stinchcombe, Halbert White (UC 샌디에이고 경제학과)<br>Neural Networks, Vol.2, No.5, pp.359–366 (1989)</p>
+  <p class="sum">은닉층이 하나뿐이어도, 어떤 &#x27;찌그러뜨리는 함수(squashing function)&#x27;를 쓰든, 은닉 뉴런만 충분하면 순방향 신경망은 거의 모든 함수(보렐 가측 함수)를 원하는 정확도로 근사할 수 있다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀 심화(뉴런을 더하면 무엇을 표현할 수 있나), 03 CNN(표현력의 근거)</p>
+  <div class="btns"><a class="btn primary" href="01_인공지능_수학/2026-W44_Hornik1989_다층신경망보편근사.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://www.cs.cmu.edu/~epxing/Class/10715/reading/Kornick_et_al.pdf" target="_blank" rel="noopener">CMU 강의(10-715) 읽기 자료 PDF</a> — 스캔본, 첫 쪽은 텍스트 층 없음</span></div>
+</article><article class="card" data-cat="인공지능 수학">
+  <div class="tag">인공지능 수학 · ★★★★★</div>
+  <h3>넓은 신경망은 깊이와 상관없이 경사하강법 아래서 선형 모델처럼 진화한다</h3>
+  <p class="orig">Wide Neural Networks of Any Depth Evolve as Linear Models Under Gradient Descent</p>
+  <p class="meta">Jaehoon Lee*, Lechao Xiao* (공동 1저자), Samuel S. Schoenholz, Yasaman Bahri, Roman Novak, Jascha Sohl-Dickstein, Jeffrey Pennington (Google Brain)<br>NeurIPS 2019</p>
+  <p class="sum">신경망이 충분히 넓으면, 학습 내내 매개변수가 초기값 근처에서 거의 움직이지 않아 신경망을 &#x27;초기값에서의 1차 테일러 전개&#x27; — 매개변수에 대한 선형 모델 — 로 바꿔도 학습 궤적이 똑같다. 제곱 손실이면 해가 닫힌 식으로 나오고, 예측은 특정 커널의 가우시안 과정을 따른다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀 심화 (&quot;신경망도 결국 선형 회귀?&quot;), 03 CNN (Wide ResNet 실험)</p>
+  <div class="btns"><a class="btn primary" href="01_인공지능_수학/2026-W44_Lee2019_넓은신경망선형모델.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1902.06720" target="_blank" rel="noopener">arXiv PDF (무료)</a> — 28쪽 (본문 9 + 참고문헌 3 + 보충자료 16)</span></div>
+</article><article class="card" data-cat="인공지능 수학">
+  <div class="tag">인공지능 수학 · ★★☆☆☆</div>
+  <h3>대학수학 경사하강법 교수·학습자료 개발</h3>
+  <p class="orig"></p>
+  <p class="meta">이상구 (성균관대학교 수학과 교수), 남윤 (성균관대 기초과학연구소), 이재화 (성균관대 기초과학연구소, 교신저자)<br>한국수학교육학회지 시리즈 E 〈수학교육 논문집〉 (Communications of Mathematical Education), 제37집 제3호, pp.467–482 (2023년 9월), KCI 등재</p>
+  <p class="sum">미적분학 수준에서 경사하강법을 가르치기 위한 자료: 코시(1847)의 아이디어에서 출발해 1변수 → 다변수 → 최소제곱 선형회귀 → 로지스틱 회귀까지, SageMath 코드와 함께 설명하고, 왜 로지스틱 회귀에서는 제곱오차가 아니라 교차 엔트로피를 써야 하는지(볼록성)를 보여 준다.</p>
+  <p class="unit">🔗 ai_life 연결: **01 선형회귀** (최소제곱 + 경사하강법을 직접 코드로), 03 CNN(교차 엔트로피 손실)</p>
+  <div class="btns"><a class="btn primary" href="01_인공지능_수학/2026-W44_Lee2023_대학수학경사하강법.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://koreascience.kr/article/JAKO202329361015461.pdf" target="_blank" rel="noopener">KoreaScience 공개 PDF (무료)</a></span></div>
+</article><article class="card" data-cat="기계학습">
+  <div class="tag">기계학습 · ★★★☆☆</div>
+  <h3>심층 이중 하강: 더 큰 모델과 더 많은 데이터가 해가 될 때</h3>
+  <p class="orig">Deep Double Descent: Where Bigger Models and More Data Hurt</p>
+  <p class="meta">Preetum Nakkiran, Gal Kaplun, Yamini Bansal, Tristan Yang, Boaz Barak (하버드대), Ilya Sutskever (OpenAI)<br>ICLR 2020 (arXiv 2019.12; 이후 J. Stat. Mech. 2021 게재)</p>
+  <p class="sum">지난주 Belkin(2019)의 &#x27;이중 하강&#x27;이 ResNet·CNN·트랜스포머 같은 현대 딥러닝에서도 강하게 나타나며, 모델 크기뿐 아니라 &#x27;학습 에폭&#x27;과 &#x27;데이터 수&#x27;에 대해서도 생긴다 — 그 정점은 모델이 학습 데이터를 겨우 다 맞출 수 있는 지점(EMC ≈ n)이다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀(과적합·모델 복잡도), 03 CNN(ResNet·CNN 크기), 04 자연어처리(트랜스포머)</p>
+  <div class="btns"><a class="btn primary" href="02_기계학습/2026-W44_Nakkiran2020_심층이중하강.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1912.02292" target="_blank" rel="noopener">arXiv PDF (무료)</a> — 24쪽 (본문 10 + 참고문헌 2 + 부록 12)</span></div>
+</article><article class="card" data-cat="기계학습">
+  <div class="tag">기계학습 · ★★★★☆</div>
+  <h3>Adam의 수렴에 대하여, 그리고 그 너머 (AMSGrad)</h3>
+  <p class="orig">On the Convergence of Adam and Beyond</p>
+  <p class="meta">Sashank J. Reddi, Satyen Kale, Sanjiv Kumar (Google 뉴욕)<br>ICLR 2018 (최우수 논문상)</p>
+  <p class="sum">Adam·RMSProp은 과거 기울기 제곱의 &#x27;지수이동평균&#x27;으로 학습률을 조절하기 때문에, 드물게 오는 큰 기울기를 금방 잊어버려 아주 단순한 1차원 볼록 문제에서도 최악의 점으로 수렴할 수 있다. 과거 최댓값을 기억하는 AMSGrad로 고치면 수렴이 보장된다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀 심화(학습률), 03 CNN(학습에 쓰는 옵티마이저)</p>
+  <div class="btns"><a class="btn primary" href="02_기계학습/2026-W44_Reddi2018_Adam수렴과AMSGrad.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/1904.09237" target="_blank" rel="noopener">arXiv PDF (무료)</a> — 23쪽 (본문 8 + 참고문헌 1 + 부록 증명 14)</span></div>
+</article><article class="card" data-cat="딥러닝">
+  <div class="tag">딥러닝 · ★★★★☆</div>
+  <h3>잡음 제거 확산 확률 모델 (DDPM)</h3>
+  <p class="orig">Denoising Diffusion Probabilistic Models</p>
+  <p class="meta">Jonathan Ho, Ajay Jain, Pieter Abbeel (UC 버클리)<br>NeurIPS 2020</p>
+  <p class="sum">사진에 가우시안 잡음을 1000단계에 걸쳐 조금씩 더해 완전한 잡음으로 만든 뒤, 신경망이 &#x27;각 단계에서 더해진 잡음 $\epsilon$&#x27;을 맞히도록 학습하면, 순수한 잡음에서 거꾸로 걸어 나와 고품질 이미지를 생성할 수 있다 — 손실은 놀랍게도 $\|\epsilon-\epsilon_\theta\|^2$ 하나.</p>
+  <p class="unit">🔗 ai_life 연결: 02 컴퓨터비전(이미지 생성), 03 CNN(U-Net 구조)</p>
+  <div class="btns"><a class="btn primary" href="03_딥러닝/2026-W44_Ho2020_확산모델DDPM.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/2006.11239" target="_blank" rel="noopener">arXiv PDF (무료)</a> — 25쪽 (본문 9 + 참고문헌 3 + 부록·샘플 그림 13)</span></div>
+</article><article class="card" data-cat="딥러닝">
+  <div class="tag">딥러닝 · ★★★☆☆ (본문) / ★★★★☆ (근사 이론)</div>
+  <h3>KAN: 콜모고로프–아놀드 네트워크</h3>
+  <p class="orig">KAN: Kolmogorov–Arnold Networks</p>
+  <p class="meta">Ziming Liu (MIT), Yixuan Wang (칼텍), Sachin Vaidya (MIT), Fabian Ruehle (노스이스턴대), James Halverson (노스이스턴대), Marin Soljačić (MIT), Thomas Y. Hou (칼텍), Max Tegmark (MIT) — NSF AI·기초상호작용연구소(IAIFI)<br>ICLR 2025 (arXiv 2024.4 최초 공개, v5 2025.2)</p>
+  <p class="sum">MLP는 &#x27;노드&#x27;에 고정된 활성화 함수를 두고 &#x27;엣지&#x27;의 선형 가중치를 학습하지만, KAN은 거꾸로 &#x27;엣지&#x27;마다 학습 가능한 1변수 함수(B-스플라인)를 두고 노드는 더하기만 한다 — 콜모고로프–아놀드 표현 정리에서 영감을 받은 이 구조는 작은 과학 문제에서 더 정확하고, 무엇보다 학습된 함수를 &#x27;눈으로 읽어&#x27; 수식을 찾을 수 있다.</p>
+  <p class="unit">🔗 ai_life 연결: 01 선형회귀(스플라인 = 구간별 다항식 회귀), 03 CNN(MLP 대안), 전 단원의 &quot;AI가 찾은 공식&quot; 활동</p>
+  <div class="btns"><a class="btn primary" href="03_딥러닝/2026-W44_Liu2025_콜모고로프아놀드네트워크.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://arxiv.org/pdf/2404.19756" target="_blank" rel="noopener">arXiv PDF (무료)</a> — 50쪽 (본문 33 + 참고문헌 8 + 부록·그림 9)</span></div>
+</article><article class="card" data-cat="컴퓨터 교육">
+  <div class="tag">컴퓨터 교육 · ★★☆☆☆</div>
+  <h3>예비교사를 위한 SW·AI에듀톤 대회의 효과성 분석</h3>
+  <p class="orig"></p>
+  <p class="meta">심재권 (고려대학교 교육문제연구소, 고려대 컴퓨터교육학과 박사), 박선주 (광주교육대학교 컴퓨터교육과, 교신저자)<br>정보교육학회논문지 (KCI 등재), 제27권 제3호, pp.321–329 (2023년 6월)</p>
+  <p class="sum">2022년 SW·AI에듀톤(예비교사가 멘토교사와 팀을 이뤄 SW·AI 수업을 설계·시연하는 대회)에 참여한 예비교사 566명(부트캠프 41명)의 AI 교수효능감을 재 보니, 대회를 마친 뒤 &#x27;내 수업이 학생 성취에 도움이 될 것(ATOE)&#x27;과 &#x27;나는 AI를 잘 가르칠 수 있다(PATE)&#x27;는 믿음이 유의하게 높아졌다.</p>
+  <p class="unit">🔗 ai_life 연결: 전 단원 — &quot;이 사이트로 수업할 **교사**는 무엇이 필요한가&quot;</p>
+  <div class="btns"><a class="btn primary" href="04_컴퓨터_교육/2026-W44_Shim2023_예비교사SWAI에듀톤.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://koreascience.kr/article/JAKO202332671238882.pdf" target="_blank" rel="noopener">KoreaScience 공개 PDF (무료)</a></span></div>
+</article><article class="card" data-cat="컴퓨터 교육">
+  <div class="tag">컴퓨터 교육 · ★☆☆☆☆</div>
+  <h3>K-12 AI 교육 구상: 모든 아이가 AI에 대해 알아야 할 것은?</h3>
+  <p class="orig">Envisioning AI for K-12: What Should Every Child Know about AI?</p>
+  <p class="meta">David Touretzky (카네기멜론대), Christina Gardner-McCune (플로리다대), Fred Martin (매사추세츠대 로웰), Deborah Seehorn (CSTA 교육과정위원회)<br>AAAI-19 (제33회 AAAI 인공지능 학술대회) Blue Sky 트랙, Vol.33 No.1, pp.9795–9799 (2019)</p>
+  <p class="sum">AAAI와 CSTA가 함께 만든 &quot;AI4K12&quot; 지침의 출발점 — 초중등 학생이 알아야 할 AI의 &#x27;5가지 큰 아이디어(Five Big Ideas)&#x27;와 학년군별(K-2, 3-5, 6-8, 9-12) 도달 목표를 처음 제시한 5쪽짜리 선언문.</p>
+  <p class="unit">🔗 ai_life 연결: 전 단원 (01~05의 학년별 목표 설계 기준), 특히 02 물체인식·04 자연어처리·05 음성인식</p>
+  <div class="btns"><a class="btn primary" href="04_컴퓨터_교육/2026-W44_Touretzky2019_K12인공지능교육.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://ojs.aaai.org/index.php/AAAI/article/download/5053/4926" target="_blank" rel="noopener">AAAI 공개 PDF (무료)</a></span></div>
+</article><article class="card" data-cat="네트워크">
+  <div class="tag">네트워크 · ★★☆☆☆</div>
+  <h3>시스템 설계에서의 종단 간 논증</h3>
+  <p class="orig">End-to-End Arguments in System Design</p>
+  <p class="meta">Jerome H. Saltzer, David P. Reed, David D. Clark (MIT 컴퓨터과학연구소; Reed는 당시 Software Arts)<br>ACM Transactions on Computer Systems, Vol.2 No.4, pp.277–288 (1984년 11월). 원래는 1981년 제2회 분산컴퓨팅시스템 국제학회 발표</p>
+  <p class="sum">어떤 기능(신뢰성, 암호화, 중복 제거, 배달 확인…)은 통신의 &#x27;양 끝&#x27;에 있는 응용 프로그램만이 완전하고 정확하게 구현할 수 있으므로, 네트워크 아래층에 넣는 것은 기껏해야 &#x27;성능 향상&#x27;일 뿐이다.</p>
+  <p class="unit">🔗 ai_life 연결: 04 AI 에이전트(도구 호출·검증을 어디서 할까), 전 단원의 &#x27;인터넷 위의 AI&#x27; 배경</p>
+  <div class="btns"><a class="btn primary" href="05_네트워크/2026-W44_Saltzer1984_종단간논증.pdf" target="_blank">한국어 리뷰지 PDF</a>
+  <span class="btn"><a href="https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf" target="_blank" rel="noopener">저자(Saltzer) MIT 페이지 공개본 (무료)</a> — 쪽 번호 1~10</span></div>
+</article></div></section>
 <section class="week"><h2>2026년 43주차
   <a class="guide" href="00_주간_읽기목록/2026-W43_이번주_읽기목록.pdf" target="_blank">📅 이번 주 읽기 가이드 PDF</a></h2>
   <div class="grid"><article class="card" data-cat="인공지능 수학">
